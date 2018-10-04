@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FlashCards" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JCl-j7-y9n">
+                                <rect key="frame" x="139" y="109" width="159" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fE3-xc-Dsb">
+                                <rect key="frame" x="139" y="159" width="159" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Front" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EBx-GP-u99">
+                                <rect key="frame" x="89" y="114" width="41" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Back" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="voA-jh-bU0">
+                                <rect key="frame" x="89" y="159" width="38" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vGP-BC-Rgp">
+                                <rect key="frame" x="16" y="308" width="343" height="197"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="21"/>
+                                <state key="normal" title="Flash Card">
+                                    <color key="titleColor" red="0.66602165618708709" green="0.220074468063259" blue="0.016728004219699444" alpha="0.64755457640000003" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="titleShadowColor" red="1" green="0.41302844509999997" blue="0.0025531725389999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.conerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="flipCard:" destination="BYZ-38-t0r" eventType="touchDown" id="EWg-a8-qKe"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="vGP-BC-Rgp" secondAttribute="bottom" constant="224" id="BvM-tn-XDQ"/>
+                            <constraint firstItem="EBx-GP-u99" firstAttribute="leading" secondItem="voA-jh-bU0" secondAttribute="leading" id="L5u-WX-ind"/>
+                            <constraint firstItem="vGP-BC-Rgp" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Ndc-Lf-HFf"/>
+                            <constraint firstItem="vGP-BC-Rgp" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Xls-t4-pzl"/>
+                            <constraint firstItem="fE3-xc-Dsb" firstAttribute="top" secondItem="JCl-j7-y9n" secondAttribute="bottom" constant="20" id="beN-N3-ojQ"/>
+                            <constraint firstItem="vGP-BC-Rgp" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="dUL-yU-vmF"/>
+                            <constraint firstItem="EBx-GP-u99" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="89" id="eoc-g8-t0f"/>
+                            <constraint firstItem="JCl-j7-y9n" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="21" id="g7L-dV-any"/>
+                            <constraint firstItem="voA-jh-bU0" firstAttribute="top" secondItem="fE3-xc-Dsb" secondAttribute="top" id="iPh-7g-KOh"/>
+                            <constraint firstItem="JCl-j7-y9n" firstAttribute="leading" secondItem="fE3-xc-Dsb" secondAttribute="leading" id="iz7-mI-Cnj"/>
+                            <constraint firstItem="EBx-GP-u99" firstAttribute="centerY" secondItem="JCl-j7-y9n" secondAttribute="centerY" id="jwm-05-HP3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="JCl-j7-y9n" secondAttribute="trailing" constant="77" id="uap-0f-Jby"/>
+                            <constraint firstItem="JCl-j7-y9n" firstAttribute="leading" secondItem="EBx-GP-u99" secondAttribute="trailing" constant="9" id="wMs-1Q-3aN"/>
+                            <constraint firstItem="JCl-j7-y9n" firstAttribute="trailing" secondItem="fE3-xc-Dsb" secondAttribute="trailing" id="yfK-3c-YDj"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <toolbarItems/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="flashCardFront" destination="vGP-BC-Rgp" id="N9y-3o-hSj"/>
+                        <outlet property="textFieldBack" destination="fE3-xc-Dsb" id="o08-rD-HeI"/>
+                        <outlet property="textFieldFront" destination="JCl-j7-y9n" id="4ti-uH-2Vj"/>
+                        <outlet property="view" destination="8bC-Xf-vdC" id="UHS-h6-kmL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-991.20000000000005" y="-95.320197044334975"/>
+        </scene>
+    </scenes>
+</document>
